@@ -6,13 +6,16 @@ const tempString = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Su
 /* string trim */
 const tempString2 = "   Lorem Ipsum     ";
 const trimmedString = tempString2.trim();
-console.log("String trim", tempString2.length, trimmedString.length)
+// console.log("String trim", tempString2.length, trimmedString.length)
 
 /* string replace
 Replace only single occurance.
 */
-const tempReplaceEg = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, at.";
 
+const tempReplaceEg = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, at.";
+/**
+ * string.replaceAll() is supported on node v15+
+ */
 const replacedString = tempReplaceEg.replace("o", '*')
 // console.log([
 //     tempReplaceEg,
@@ -22,7 +25,8 @@ const replacedString = tempReplaceEg.replace("o", '*')
 */
 const tempReplaceEg2 = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, at.";
 
-const replacedString2 = tempReplaceEg2.replace(/o/g, '*')
+const replacedString2 = tempReplaceEg2.replace(/o/g, '*');
+console.log("Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, at.".replaceAll("o", "*"));
 // console.log([
 //     tempReplaceEg2,
 //     replacedString2,]);
